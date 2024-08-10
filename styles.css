@@ -1,0 +1,592 @@
+/*Sam Platten*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, 
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+
+  
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+    --yellow: #F6D64A;
+    --teal:#55BCD5;
+    --purple:#9B26B0;
+    --blue: #499BD2;
+    --dark-gray:#222222;
+    --light-gray:#EAEAEA;
+    --white:#FFFFFF;
+    --black:#000000;
+
+}
+
+#skip {
+  padding: 8px;
+  position: absolute;
+  background: var(--yellow);
+  left: 50%;
+  height: 30px;
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+}
+
+#skip:focus {
+  transform: translateY(0%);
+}
+
+
+h1, h2, h3 {
+    font-family: "Molle", cursive;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+ h4, p, q, small, nav, button, form, #form-required, input[type="submit"], span.form-required, input, select {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  input::placeholder, select::placeholder {
+    color:var(--black);
+  }
+
+  span.form-required {
+    font-size:1rem;
+    font-style:italic;
+  }
+
+  header img {
+    width:40vw;
+    height:auto;
+    margin:10px;
+  }
+
+  h1 {
+    font-size:50px;
+    margin-left:4vh;
+    align-self:flex-end;
+  }
+
+
+  header {
+    background: linear-gradient(var(--teal),var(--white));
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:2fr 1fr 1fr;
+  }
+
+  header p {
+    margin:0 0 0 4vh;
+    line-height:1.5;
+    font-size:1.2rem;
+    font-weight:500;
+    width:70%;
+  }
+
+  article {
+    display:grid;
+    row-gap:2vh;
+  }
+
+  .required {
+    color:var(--purple);
+  }
+  
+  nav {
+    visibility:hidden;
+    position:absolute;
+  }
+
+
+  nav ul {
+    display:grid;
+    grid: 1fr / repeat(4,1fr);
+    background-color: var(--white);
+    color:var(--black);
+    text-decoration:none;
+  }
+  
+#intro h2 {
+  font-size:2.5rem;
+  align-self:flex-end;
+  margin:0 0 0 4vh;
+}
+
+#intro p {
+  align-self:flex-start;
+  margin: 0 4vh 0 4vh;
+  line-height:2;
+  font-size:1.1rem;
+}
+
+#intro {
+  display:grid;
+  gap:10px; 
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4fr 15fr;
+}
+
+#img-grid {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:center;
+    justify-items:center;
+    row-gap:1vh;
+  }
+
+  #plan h3 {
+    text-align:center;
+    font-size:2.5rem;
+    margin:20px;
+  }
+
+  #plan {
+    background-color: var(--yellow);
+    padding: 20px 0 20px 0;
+   
+  }
+  
+  #plan div {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:center;
+    justify-items:center;
+    row-gap:2vh;
+  }
+
+#plan section {
+        background-color: var(--teal);
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content:space-around;
+        gap:30px;
+        width:350px;
+        height:300px;
+        border:3px solid var(--white);
+        border-radius:5%;
+        padding:10px;
+    }
+
+#plan h4 {
+    font-weight:1000;
+    font-size:1.6rem;
+    text-transform:uppercase;
+    
+}
+
+#plan img {
+    width:auto;
+    height:80%;
+}
+
+#testimonials h3{
+    font-size:2.5rem;
+    margin:20px 40px;
+}
+
+#testimonials h4 {
+    font-size:1.8rem;
+    text-transform:uppercase;
+    font-weight:1000;
+}
+
+#testimonials p {
+    font-size:1.2rem; 
+}
+#testimonials q {
+    font-size:1.2rem;
+    font-style:italic;
+    text-align:center;
+    max-width:85%;
+    quotes:inherit;
+}
+
+#testimonials div{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:space-around;
+    row-gap:3.5vh;
+}
+
+#testimonials section{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:center;
+    justify-items:center;
+    width:65vw;
+    height:20vh;
+    margin:10px;
+}
+
+
+  #about {
+    background-color: var(--blue);
+    padding:2vh 2vh 2vh 2vh;
+  }
+
+  #about h3 {
+    margin: 0 0 0 2vh;
+    font-size:2rem;
+    width:50%;
+  }
+  #about div {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:1fr 1fr;
+    justify-items:center;
+    margin:2vh;
+    
+  }
+
+  #about img {
+    width:70%;
+    height:auto;
+    justify-self:center;
+    align-self:center;
+    margin-bottom:1vh;
+    
+  }
+
+#about div section {
+  display:grid;
+  grid-template-columns:1fr;
+  grid-template-rows:4fr 1fr 1fr;
+  justify-items:center;
+  
+}
+
+#about div section h4 {
+  font-weight:1000;
+  text-transform:uppercase;
+  font-size:1.2rem;
+}
+
+#about div section p {
+  font-size:1.1rem;
+  
+}
+
+#contact {
+  justify-self:center;
+  width:30vh;
+}
+
+#contact h3 {
+  font-size:1.4em;
+}
+
+
+
+form {
+  display:grid;
+  grid-template-columns:1fr;
+  grid-template-rows:1fr 1fr 1fr;
+  max-width:100%;
+  max-height:80%;
+}
+
+label, legend {
+  font-weight:1000;
+  text-transform:uppercase;
+}
+
+
+
+.radio-label {
+  font-weight:500;
+}
+
+input {
+  border:3px solid var(--purple);
+}
+
+
+
+#names {
+  display:grid;
+  grid:1fr 3fr 1fr 3fr 1fr / 1fr;
+}
+
+#nums {
+  display:grid;
+  grid:1fr 1fr 1fr 1fr 1fr / 1fr;
+  height:80%;
+}
+
+#selects {
+  display:grid;
+  grid: 1fr 2fr 1fr 2fr 2fr / 1fr;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], select {
+  width:30vh;
+  border:3px solid var(--purple);
+  height:3.5vh;
+  padding:1px;
+}
+
+label {
+  align-self:flex-end;
+}
+
+input[type="submit"] {
+  background-color: var(--purple);
+  color:var(--white);
+  width:50%;
+  justify-self:flex-end;
+  text-transform:uppercase;
+}
+
+input[type="radio"] {
+    appearance: none; /* Remove default styling */
+    width: 40px; /* Set width (circumference size) */
+    height: 40px; /* Set height (circumference size) */
+    border: 2px solid var(--purple); /* Purple border */
+    border-radius: 50%; /* Make it circular */
+
+}
+
+input[type="radio"]:checked {
+  background-color: var(--purple); /* Purple color when selected */
+  
+}
+
+footer {
+  background-color: var(--light-gray);
+  text-align:center;
+}
+
+
+@media only screen and (min-width: 500px) and (max-width:1023px) {
+  /* Styles for medium screen */
+
+#plan div {
+  flex-direction:row;
+  flex-wrap:wrap;
+  width:90%;
+  gap:2vh;
+}
+
+#testimonials div section {
+  width:40%;
+  height:40vh;
+}
+
+#testimonials div {
+  flex-wrap:wrap;
+  flex-direction:row;
+}
+
+#testimonials img {
+  max-width:50%;
+}
+
+#about div {
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: 1fr;
+}
+
+#about h3 {
+  font-size:4.5rem;
+  width:100%;
+}
+
+#testimonials h3 {
+  font-size:4rem;
+  margin-left:9vh;
+}
+
+#plan h3 {
+  margin:0;
+  font-size:4rem;
+  text-align:left;
+  margin-left:9vh;
+}
+
+#img-grid {
+  flex-wrap:wrap;
+  flex-direction:row;
+  column-gap: 1vh;
+}
+
+#contact {
+  max-width:50vw;
+}
+
+
+input[type="text"], input[type="email"], input[type="tel"], select {
+  max-width:50vw;
+}
+
+header {
+  background: linear-gradient(var(--teal), var(--white));
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "image title title title"
+  "image desc desc desc";
+}
+
+header a {
+  grid-area:image;
+  justify-self:center;
+  align-self:center;
+}
+
+header img {
+  width:20vw;
+  height:auto;
+}
+
+header p {
+  margin: 0 0 0 4vh;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 100%;
+}
+
+header p {
+  grid-area:desc;
+}
+
+
+
+h1{
+  grid-area:title;
+  font-size: 80px;
+}
+}
+
+@media only screen and (min-width: 1024px) {
+  /* Styles for large screen*/
+
+  #img-grid {
+    flex-direction:row;
+    flex-wrap:wrap;
+ 
+  }
+
+  #testimonials div {
+    flex-direction:row;
+  }
+
+  #testimonials {
+    margin-bottom:30px;
+  }
+
+
+#testimonials section {
+  width:100%;
+}
+
+  #about div {
+    grid-template-columns:repeat(4,1fr);
+    grid-template-rows:1fr;
+}
+
+#intro {
+  grid-template-columns:1fr 8fr 8fr 1fr;
+  grid-template-rows:1fr 1fr;
+  grid-template-areas:"majorca majorca imagegrid imagegrid"
+  "description description imagegrid imagegrid";
+}
+
+#intro h2 {
+  grid-area:majorca;
+}
+
+#intro p{
+  grid-area:description;
+}
+
+#img-grid {
+  grid-area:imagegrid;
+}
+
+#plan div {
+  flex-direction:row;
+  column-gap:2vh;
+}
+
+header{
+  grid-template-columns:repeat(7,1fr);
+  grid-template-rows:2fr 1fr;
+  grid-template-areas: "sunset wund wund . . . ."
+  "sunset trip trip trip . . .";
+}
+
+header img {
+  width:auto;
+  grid-area:sunset;
+}
+h1{
+  grid-area:wund;
+}
+
+header p {
+  grid-area:trip;
+}
+
+form {
+  grid-template-rows:1fr;
+  grid-template-columns:repeat(3,1fr);
+  grid-template-areas: "names nums selects";
+
+}
+
+
+#names{
+  grid-area:names;
+}
+
+#nums {
+  grid-area:nums;
+}
+
+#selects {
+  grid-area:selects;
+}
+
+}
